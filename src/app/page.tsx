@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/translations";
 import { Header } from "@/components/Header";
@@ -43,7 +44,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/60" />
           </div>
 
-          <div className="container mx-auto px-4 lg:px-8 relative z-10 flex flex-col items-center text-center justify-center w-full h-full pt-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="container mx-auto px-4 lg:px-8 relative z-10 flex flex-col items-center text-center justify-center w-full h-full pt-10"
+          >
             <div className="inline-block bg-primary/20 text-primary border border-primary/30 px-4 py-1.5 rounded-full text-sm font-bold mb-6 w-fit">
               {t.hl24Hours}
             </div>
@@ -59,25 +66,31 @@ export default function Home() {
                 href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(t.whatsappMsg)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-lg shadow-primary/25 text-center"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-[1.05] shadow-lg hover:shadow-[var(--shadow-glow-primary)] text-center"
               >
                 {t.whatsapp}
               </a>
               <a 
                 href="#services"
-                className="bg-surface hover:bg-transparent text-foreground hover:text-white border border-black/10 hover:border-white px-8 py-4 rounded-xl font-bold text-lg transition-colors text-center"
+                className="bg-surface hover:bg-transparent text-foreground hover:text-white border border-black/10 hover:border-white px-8 py-4 rounded-xl font-bold text-lg transition-colors hover:shadow-[var(--shadow-glow-primary)] text-center"
               >
                 {t.viewServices}
               </a>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* HIGHLIGHTS STRIP */}
-        <div className="bg-surface border-y border-black/5 relative z-20 -mt-10 mx-4 lg:mx-auto max-w-7xl rounded-2xl shadow-2xl backdrop-blur-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-surface border-y border-black/5 relative z-20 -mt-10 mx-4 lg:mx-auto max-w-7xl rounded-2xl shadow-2xl backdrop-blur-xl"
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 lg:p-8">
             {siteConfig.highlights.map((hl) => (
-              <div key={hl.id} className="flex flex-col items-center text-center gap-3 p-4 rounded-xl hover:bg-black/5 transition-colors">
+              <div key={hl.id} className="flex flex-col items-center text-center gap-3 p-4 rounded-xl hover:bg-black/5 hover:-translate-y-2 transition-all duration-300">
                 <div className="bg-background p-4 rounded-full shadow-inner border border-black/5">
                   <hl.Icon className="w-8 h-8 text-primary" />
                 </div>
@@ -87,15 +100,20 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* SERVICES SECTION */}
         <section id="services" className="py-24 bg-stone-100">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{t.servicesTitle}</h2>
               <p className="text-text-muted text-lg max-w-2xl mx-auto">{t.servicesSubtitle}</p>
-            </div>
+            </motion.div>
 
             {/* ENGINE OIL SERVICES */}
             <div className="mb-20">
@@ -117,7 +135,14 @@ export default function Home() {
                   else if (idx === 6) gridClass = "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1";
 
                   return (
-                    <div key={service.id} className={`group relative bg-surface rounded-3xl overflow-hidden border border-black/5 hover:border-primary/50 transition-all shadow-xl h-full w-full ${gridClass}`}>
+                    <motion.div 
+                      key={service.id} 
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      className={`group relative bg-surface rounded-3xl overflow-hidden border border-black/5 hover:border-primary/50 transition-all hover:-translate-y-2 hover:shadow-[var(--shadow-glow-primary)] shadow-xl h-full w-full ${gridClass}`}
+                    >
                       <Image 
                         src={service.image}
                         alt={t[service.transKeyTitle as keyof typeof t] as string}
@@ -129,7 +154,7 @@ export default function Home() {
                         <h4 className="text-2xl font-bold text-white mb-2">{t[service.transKeyTitle as keyof typeof t]}</h4>
                         <p className="text-text-muted text-sm line-clamp-3 group-hover:text-gray-200 transition-colors">{t[service.transKeyDesc as keyof typeof t]}</p>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -154,7 +179,14 @@ export default function Home() {
                   else if (idx === 5) gridClass = "lg:col-span-1 lg:row-span-1";
 
                   return (
-                    <div key={service.id} className={`group relative bg-surface rounded-3xl overflow-hidden border border-black/5 hover:border-accent/50 transition-all shadow-xl h-full w-full ${gridClass}`}>
+                    <motion.div 
+                      key={service.id} 
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      className={`group relative bg-surface rounded-3xl overflow-hidden border border-black/5 hover:border-accent/50 transition-all hover:-translate-y-2 hover:shadow-[var(--shadow-glow-accent)] shadow-xl h-full w-full ${gridClass}`}
+                    >
                       <Image 
                         src={service.image}
                         alt={t[service.transKeyTitle as keyof typeof t] as string}
@@ -166,7 +198,7 @@ export default function Home() {
                         <h4 className="text-2xl font-bold text-white mb-2">{t[service.transKeyTitle as keyof typeof t]}</h4>
                         <p className="text-text-muted text-sm line-clamp-3 group-hover:text-gray-200 transition-colors">{t[service.transKeyDesc as keyof typeof t]}</p>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -175,7 +207,13 @@ export default function Home() {
         </section>
 
         {/* SPECIAL OFFER BANNER */}
-        <section className="relative overflow-hidden mx-4 xl:mx-auto max-w-7xl my-24 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black h-[500px] md:h-[600px] flex items-center">
+        <motion.section 
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative overflow-hidden mx-4 xl:mx-auto max-w-7xl my-24 shadow-[var(--shadow-glow-primary)] bg-black h-[500px] md:h-[600px] flex items-center hover:shadow-[var(--shadow-glow-accent)] transition-all duration-700"
+        >
           <Image 
             src={siteConfig.offer.image}
             alt="Special Offer"
@@ -238,7 +276,7 @@ export default function Home() {
               {t.whatsapp}
             </a>
           </div>
-        </section>
+        </motion.section>
 
         {/* PRODUCTS SECTION */}
         <section id="products" className="py-24 bg-white">
@@ -247,7 +285,12 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{t.productsTitle}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="relative h-80 rounded-3xl overflow-hidden group">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-80 rounded-3xl overflow-hidden group hover:shadow-[var(--shadow-glow-accent)] transition-all duration-500 hover:-translate-y-2"
+              >
                 <Image 
                   src={siteConfig.products.tyresImage}
                   alt={t.tyresSection}
@@ -259,8 +302,13 @@ export default function Home() {
                   <h3 className="text-3xl font-bold text-white mb-2">{t.tyresSection}</h3>
                   <p className="text-gray-300 text-lg">{t.tyresDesc}</p>
                 </div>
-              </div>
-              <div className="relative h-80 rounded-3xl overflow-hidden group">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-80 rounded-3xl overflow-hidden group hover:shadow-[var(--shadow-glow-primary)] transition-all duration-500 hover:-translate-y-2"
+              >
                 <Image 
                   src={siteConfig.products.oilImage}
                   alt={t.oilSection}
@@ -272,15 +320,20 @@ export default function Home() {
                   <h3 className="text-3xl font-bold text-white mb-2">{t.oilSection}</h3>
                   <p className="text-gray-300 text-lg">{t.oilDesc}</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* WHY CHOOSE US */}
         <section id="why-us" className="py-24 bg-slate-100">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="bg-surface border border-black/5 rounded-[3rem] p-6 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-surface border border-black/5 rounded-[3rem] p-6 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:gap-16 items-center hover:shadow-[var(--shadow-glow-primary)] transition-shadow duration-700"
+            >
               
               {/* Left Image Side */}
               <div className="relative w-full lg:w-5/12 aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[3rem] rounded-tl-[6rem] rounded-br-[6rem] overflow-hidden shrink-0 shadow-2xl bg-surface">
@@ -332,7 +385,7 @@ export default function Home() {
 
               </div>
 
-            </div>
+            </motion.div>
           </div>
         </section>
 

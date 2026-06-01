@@ -71,7 +71,7 @@ export function Header() {
               href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+              className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 hover:shadow-[var(--shadow-glow-primary)]"
             >
               {t.whatsapp}
             </a>
@@ -116,7 +116,7 @@ export function Header() {
               href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-white p-3 rounded-xl font-medium text-center mt-2"
+              className="bg-primary text-white p-3 rounded-xl font-medium text-center mt-2 hover:shadow-[var(--shadow-glow-primary)] transition-all duration-300"
             >
               {t.whatsapp}
             </a>

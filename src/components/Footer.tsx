@@ -65,14 +65,21 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Social Row */}
+        {/* Bottom Social & Map Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <a href="#" className="bg-surface border border-black/5 hover:border-primary/50 hover:bg-black/5 transition-all rounded-3xl aspect-square flex items-center justify-center group">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-text-muted group-hover:text-primary transition-colors"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
-          </a>
-          <a href="#" className="bg-surface border border-black/5 hover:border-primary/50 hover:bg-black/5 transition-all rounded-3xl aspect-square flex items-center justify-center group">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-text-muted group-hover:text-primary transition-colors"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
-          </a>
+          {/* Map Section taking 2 columns */}
+          <div className="col-span-2 bg-surface border border-black/5 rounded-3xl overflow-hidden hover:shadow-[var(--shadow-glow-primary)] transition-shadow duration-500 aspect-[2/1] md:aspect-auto">
+            <iframe 
+              src="https://maps.google.com/maps?q=X28G%2B4RH%2C%20King%20Khaled%20Rd%2C%20Old%20Industrial%20City%2C%20Ar%20Ar%2073311%2C%20Saudi%20Arabia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Saudi Garej Location"
+            ></iframe>
+          </div>
           <a href="#" className="bg-surface border border-black/5 hover:border-primary/50 hover:bg-black/5 transition-all rounded-3xl aspect-square flex items-center justify-center group">
             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-text-muted group-hover:text-primary transition-colors"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
           </a>
