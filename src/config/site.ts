@@ -9,7 +9,7 @@ export const siteConfig = {
     image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2574&auto=format&fit=crop",
   },
   offer: {
-    image: "https://images.unsplash.com/photo-1552930294-6b595f4c2974?q=80&w=2670&auto=format&fit=crop", // Dynamic pressure car wash
+    image: "/offer-banner.jpg",
   },
   highlights: [
     { id: "24hours", transKey: "hl24Hours", Icon: Clock },

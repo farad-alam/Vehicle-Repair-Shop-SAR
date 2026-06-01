@@ -182,7 +182,7 @@ export default function Home() {
             fill
             className="object-cover object-right opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent rtl:bg-gradient-to-l" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black from-0% to-transparent to-25%" />
           
           {/* Inner Frame */}
           <div className="absolute inset-4 md:inset-6 border border-white/20 pointer-events-none z-10" />
