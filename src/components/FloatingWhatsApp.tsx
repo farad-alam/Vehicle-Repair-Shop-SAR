@@ -38,7 +38,7 @@ export function FloatingWhatsApp() {
       <WhatsAppIcon />
       
       {/* Tooltip */}
-      <span className={`absolute ${dir === 'rtl' ? 'left-full ml-4' : 'right-full mr-4'} top-1/2 -translate-y-1/2 bg-surface text-foreground text-sm font-medium py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg border border-white/10 pointer-events-none`}>
+      <span className={`absolute ${dir === 'rtl' ? 'left-full ml-4' : 'right-full mr-4'} top-1/2 -translate-y-1/2 bg-surface text-foreground text-sm font-medium py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg border border-black/10 pointer-events-none`}>
         {t.whatsapp}
       </span>
     </a>

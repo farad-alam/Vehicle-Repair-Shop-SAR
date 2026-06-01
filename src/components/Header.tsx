@@ -39,7 +39,7 @@ export function Header() {
           <div className="bg-primary p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
             <Wrench className="text-white w-6 h-6" />
           </div>
-          <span className="text-xl font-bold text-foreground">
+          <span className="text-xl font-bold text-foreground bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg shadow-sm">
             {t.workshopName}
           </span>
         </a>
@@ -59,7 +59,7 @@ export function Header() {
             ))}
           </ul>
           
-          <div className="flex items-center gap-4 border-l border-surface pl-4 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-4">
+          <div className="flex items-center gap-4 border-l border-black/10 pl-4 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-4">
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-text-muted hover:text-foreground transition-colors"
@@ -89,19 +89,19 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-surface/95 backdrop-blur-xl border-t border-background shadow-xl">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-surface/95 backdrop-blur-xl border-t border-black/5 shadow-xl">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-foreground hover:text-accent font-medium p-2 rounded-lg hover:bg-background/50 transition-colors"
+                className="text-foreground hover:text-accent font-medium p-2 rounded-lg hover:bg-black/5 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <div className="h-px bg-background my-2" />
+            <div className="h-px bg-black/5 my-2" />
             <button
               onClick={() => {
                 toggleLanguage();
