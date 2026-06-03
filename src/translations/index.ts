@@ -19,7 +19,7 @@ export const translations = {
     // Highlights
     hl24Hours: "مفتوح 24/7",
     hlWarranty: "ضمان على المنتجات",
-    hlLeveling: "خدمة وزن الإطارات",
+    hlLeveling: "ميزان إلكتروني",
     hlFreeWash: "غسيل مجاني مع الزيت",
 
     // Services
@@ -27,7 +27,7 @@ export const translations = {
     servicesSubtitle: "نقدم مجموعة شاملة من خدمات الصيانة لتلبية جميع احتياجات سيارتك",
     
     engineOilTitle: "خدمات زيت المحرك",
-    oilChange: "تغيير زيت المحرك",
+    oilChange: "غيار زيت",
     oilChangeDesc: "استبدال زيت المحرك بزيوت عالية الجودة لضمان أداء المحرك وعمره الافتراضي.",
     filterChange: "تنظيف وتغيير الفلتر",
     filterChangeDesc: "تغيير فلتر الزيت والوقود لضمان نقاء المحرك من الشوائب والأوساخ.",
@@ -43,13 +43,13 @@ export const translations = {
     brakeOilDesc: "فحص وتعبئة زيت الفرامل لضمان استجابة سريعة وآمنة للفرامل.",
     
     workshopServicesTitle: "خدمات الورشة",
-    tyreSales: "بيع إطارات جديدة",
-    tyreSalesDesc: "توفير مجموعة واسعة من الإطارات الجديدة ذات العلامات التجارية العالمية.",
-    tyreRepair: "إصلاح تسريب الإطارات",
-    tyreRepairDesc: "إصلاح الثقوب والتسريبات في الإطارات بسرعة واحترافية.",
-    tyreBalancing: "ترصيص ووزن الإطارات",
-    tyreBalancingDesc: "وزن الإطارات لتجنب الاهتزازات أثناء القيادة بسرعات عالية.",
-    batterySales: "بيع بطاريات جديدة",
+    tyreSales: "كفرات",
+    tyreSalesDesc: "توفير مجموعة واسعة من الكفرات الجديدة ذات العلامات التجارية العالمية.",
+    tyreRepair: "إصلاح بنشر الكفرات",
+    tyreRepairDesc: "إصلاح الثقوب والتسريبات في الكفرات بسرعة واحترافية.",
+    tyreBalancing: "ترصيص وميزان إلكتروني",
+    tyreBalancingDesc: "ترصيص الكفرات والميزان الإلكتروني لتجنب الاهتزازات أثناء القيادة.",
+    batterySales: "بطاريات",
     batterySalesDesc: "بطاريات قوية وطويلة الأمد مناسبة لجميع أنواع السيارات مع الضمان.",
     electricalIssues: "إصلاح المشاكل الكهربائية",
     electricalIssuesDesc: "فحص وإصلاح أعطال الكهرباء والأسلاك والأنظمة الإلكترونية للسيارة.",
@@ -62,8 +62,8 @@ export const translations = {
     
     // Products
     productsTitle: "منتجاتنا",
-    tyresSection: "الإطارات",
-    tyresDesc: "نوفر أفضل أنواع الإطارات بجميع المقاسات وبضمان الوكيل.",
+    tyresSection: "الكفرات",
+    tyresDesc: "نوفر أفضل أنواع الكفرات بجميع المقاسات وبضمان الوكيل.",
     oilSection: "زيوت المحركات",
     oilDesc: "زيوت أصلية ومعتمدة تناسب جميع أنواع السيارات.",
 
