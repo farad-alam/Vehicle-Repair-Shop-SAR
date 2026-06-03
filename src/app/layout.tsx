@@ -14,7 +14,7 @@ const notoKufi = Noto_Kufi_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "ورشة إصلاح المركبات | Vehicle Repair Shop",
+  title: "مؤسسة سيارة الحد لخدمات السيارات | Vehicle Repair Shop",
   description: "خدمات صيانة وإصلاح احترافية. متوفرون في أي وقت تحتاجه. Professional maintenance and repair services open 24 hours.",
 };
 

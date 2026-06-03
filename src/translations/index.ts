@@ -1,7 +1,7 @@
 export const translations = {
   ar: {
     // Nav & Common
-    workshopName: "ورشة إصلاح المركبات",
+    workshopName: "مؤسسة سيارة الحد لخدمات السيارات",
     home: "الرئيسية",
     services: "الخدمات",
     offers: "العروض",
@@ -12,7 +12,7 @@ export const translations = {
     languageToggle: "English",
 
     // Hero
-    heroTitle: "ورشة إصلاح المركبات الموثوقة — مفتوحة 24 ساعة",
+    heroTitle: "مؤسسة سيارة الحد لخدمات السيارات الموثوقة — مفتوحة 24 ساعة",
     heroSubtitle: "خدمات صيانة وإصلاح احترافية. متوفرون في أي وقت تحتاجه لضمان سلامتك على الطريق.",
     viewServices: "تصفح الخدمات",
 
