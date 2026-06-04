@@ -91,7 +91,7 @@ export const translations = {
   },
   en: {
     // Nav & Common
-    workshopName: "Vehicle Repair Shop",
+    workshopName: "Al-Hadd Auto Services",
     home: "Home",
     services: "Services",
     offers: "Offers",
@@ -102,7 +102,7 @@ export const translations = {
     languageToggle: "عربي",
 
     // Hero
-    heroTitle: "Your Trusted Vehicle Repair Shop — Open 24 Hours",
+    heroTitle: "Al-Hadd Auto Services — Your Trusted Mechanics Open 24/7",
     heroSubtitle: "Professional maintenance and repair services. Available anytime you need to keep you safe on the road.",
     viewServices: "View Services",
 

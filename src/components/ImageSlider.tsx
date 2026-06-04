@@ -29,8 +29,9 @@ export function ImageSlider({ images, interval = 4000, className = "" }: ImageSl
         <Image
           key={src}
           src={src}
-          alt={`Slider image ${index + 1}`}
+          alt={`Al-Hadd Auto Services - Professional Car Repair in Ar Ar ${index + 1}`}
           fill
+          sizes="100vw"
           className={`object-cover transition-opacity duration-[1500ms] ease-in-out ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           } ${className}`}

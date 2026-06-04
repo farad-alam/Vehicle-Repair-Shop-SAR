@@ -147,6 +147,7 @@ export default function Home() {
                         src={service.image}
                         alt={t[service.transKeyTitle as keyof typeof t] as string}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover opacity-100 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
@@ -191,6 +192,7 @@ export default function Home() {
                         src={service.image}
                         alt={t[service.transKeyTitle as keyof typeof t] as string}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover opacity-100 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
@@ -216,8 +218,9 @@ export default function Home() {
         >
           <Image 
             src={siteConfig.offer.image}
-            alt="Special Offer"
+            alt="Special Offer Banner"
             fill
+            sizes="100vw"
             className="object-cover object-right opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black from-0% to-transparent to-25%" />
@@ -295,6 +298,7 @@ export default function Home() {
                   src={siteConfig.products.tyresImage}
                   alt={t.tyresSection}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
@@ -313,6 +317,7 @@ export default function Home() {
                   src={siteConfig.products.oilImage}
                   alt={t.oilSection}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
