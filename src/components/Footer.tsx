@@ -70,7 +70,7 @@ export function Footer() {
           {/* Map Section taking 2 columns */}
           <div className="col-span-2 bg-surface shadow-2xl border border-black/5 rounded-3xl overflow-hidden hover:shadow-[var(--shadow-glow-primary)] transition-shadow duration-500 aspect-[2/1] md:aspect-auto">
             <iframe 
-              src="https://maps.google.com/maps?q=X28G%2B4RH%2C%20King%20Khaled%20Rd%2C%20Old%20Industrial%20City%2C%20Ar%20Ar%2073311%2C%20Saudi%20Arabia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=بنشر%20سيارة%20الحد%20لخدمة%20السيارات&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
